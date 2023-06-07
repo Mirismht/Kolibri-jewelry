@@ -1,0 +1,544 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  max-width: 100%;
+  min-width: 50%;
+
+}
+
+body{
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  width: 100%;
+  overflow-x: hidden;
+
+}
+
+
+/*HEADER*/
+
+header{
+  height: 300px;
+  width: 100%;
+}
+
+.logo img{
+  max-width: 100%;
+  width: min(50%, 250px);
+  height: min(50%, 200px);
+  margin: auto;
+  display: block;
+}
+
+nav{
+  display: flex;
+ justify-content: center;
+}
+
+nav ul li{
+  font-size: clamp(0.90rem, calc(0.82rem + 0.38vw), 1.25rem);
+  font-weight: 700;
+  list-style: none;
+  display: inline-flex;
+  margin: 0 20px;
+}
+
+/*MAIN*/
+
+
+
+main{
+  max-width: 100%;
+  background-image: url(images/pexels-egor-kamelev-753416.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, .8);
+  height: 80vh;
+  max-height: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: end;
+  
+}
+
+.header-content {
+  width: 90vw;
+  max-inline-size: fit-content;
+  margin-inline: auto;
+}
+
+main h1{
+  font-size: clamp(1.05rem, calc(0.74rem + 1.57vw), 2.50rem);
+  color: white;
+ padding-top: 100px ;
+
+
+}
+main p{
+ padding-top: 10px;
+ font-weight: 700;
+ color: white;
+ font-size: clamp(0.99rem, calc(0.86rem + 0.67vw), 1.62rem);
+}
+
+/*BUTTON*/
+.btn{
+border: solid white;
+margin-top: 60px;
+padding: 15px;
+width: min(40%, 200px);
+text-align: center;
+
+}
+
+.btn a{
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  font-size: clamp(0.75rem, calc(0.70rem + 0.27vw), 1.00rem);
+}
+
+
+.btn-collection{
+  border: solid rgb(10, 10, 10);
+  padding: 10px;
+  width: min(100%, 160px);
+  text-align: center;
+  display: inline-block;
+  margin-top: 55px;
+}
+
+.btn-watches{
+  text-align: center;
+  padding: 10px;
+  margin-top: 75px;
+  margin-left: 150px;
+  margin-right: auto;
+  border: solid rgb(10, 10, 10);
+  width: min(50%, 160px);
+}
+
+.btn-stone-jewelry{
+  border: solid white;
+  padding: 10px;
+  margin-left: 90px;
+  text-align: center;
+  width: min(60%, 160px);
+}
+
+.btn-bridal-set{
+  border: solid white;
+  width: 160px;
+  padding: 10px;
+  margin-top: 56px; 
+  text-align: center;
+}
+
+.btn.-btn-kolibri {
+  margin: auto;
+  width: 200px;
+
+}
+
+.btn-subscribe{
+  border: solid white;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+}
+
+.btn-stone-jewelry a,
+.btn-bridal-set a,
+.btn.-btn-kolibri a,
+.subscribe a{
+  text-decoration: none;
+    color: WHITE;
+    font-weight: 700;
+    font-size: clamp(0.75rem, calc(0.70rem + 0.27vw), 1.00rem);
+}
+
+.btn-collection a,
+.btn-watches a{
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+  font-size: clamp(0.75rem, calc(0.70rem + 0.27vw), 1.00rem);
+}
+
+
+/*CONTAINER*/
+
+.container--1{
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 55vh;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.container--2{
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 55vh;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+
+  .container--1 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+
+  .container--1 {
+    grid-template-columns: 100%;
+  grid-template-rows: repeat(2, 50vh);
+  
+  }
+
+  .container--2 {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 50vh);
+    }
+
+  .collections {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  }
+
+  .watches {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .stone-jewelry {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .bridal-set{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+
+}
+
+
+
+@media only screen and (max-width: 480px){
+  main h1{
+    font-size: 15px;
+  }
+  
+  .header-content {
+    margin: auto;
+    min-width: min-content;
+  }
+  
+  .container--1{
+    grid-template-rows: repeat(2, 55vh);
+  
+  }
+  
+  .container--2{
+    grid-template-rows: repeat(2, 50vh);
+  }
+  
+  main{
+  height: 65vh;
+  }
+
+  main p{
+  font-size: 13px;
+  }
+
+  nav ul li{
+  font-size: 13px;
+  }
+
+  }
+  
+
+
+
+.collections{
+  background-image: url(images/pexels-cottonbro-9428776.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: end;
+  max-height: 100%;
+}
+
+
+
+.collection-content{
+  font-size: clamp(0.83rem, calc(0.72rem + 0.56vw), 1.35rem);
+  float: right;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+
+.collection-content h2{
+  text-align: center;
+  padding: 40px;
+  letter-spacing: 3px;
+  font-size: clamp(1.08rem, calc(0.98rem + 0.52vw), 1.56rem);
+}
+
+.collection-content p{
+  font-weight: 700;
+}
+
+.watches{
+  background-image: url(images/pexels-jess-bailey-designs-1162519.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: cover;
+  color: rgb(10, 10, 10);
+  display: flex;
+  justify-content: center;
+  max-height: 100%;
+}
+
+.watches-content{
+  object-fit: scale-down;
+  margin: auto;
+  min-block-size: -webkit-fill-available;
+  padding: 15px;
+  
+}
+
+.watches-content h2{
+  text-align: center;
+    margin: 30px 0;
+    letter-spacing: 3px;
+    font-size: clamp(1.08rem, calc(0.98rem + 0.52vw), 1.56rem);
+}
+
+.watches-content p{
+  font-weight: 700;
+  font-size: 14px;
+  font-size: clamp(0.83rem, calc(0.72rem + 0.56vw), 1.35rem);
+}
+
+.stone-jewelry{
+  background-image: url(images/pexels-karolina-grabowska-4040586.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  justify-content: left;
+}
+
+.stone-content{
+  margin: 19px;
+  align-self: center;
+  padding: 25px;
+}
+
+.stone-content h2{
+  letter-spacing: 3px;
+  margin: 20px 0;
+  font-size: clamp(1.08rem, calc(0.98rem + 0.52vw), 1.56rem);
+}
+
+.stone-content p{
+  font-size: 14px;
+    margin-bottom: inherit;
+    font-size: clamp(0.83rem, calc(0.72rem + 0.56vw), 1.35rem);
+}
+
+.bridal-set{
+  background-image: url(images/pexels-the-glorious-studio-10976653.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: fit-content;
+  color: white;
+}
+
+.bridal-content{
+  margin: 20px 50px;
+}
+
+.bridal-content h2{
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.bridal-content p{
+  padding-left: 20px;
+  font-size: 14px;
+  font-size: clamp(0.83rem, calc(0.72rem + 0.56vw), 1.35rem);
+}
+
+
+/*SECTION Kolibri*/
+.background1{
+  max-width: 100%;
+  background-image: url(images/pexels-jonny-lew-1121123.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.background1-content{
+padding: 20px;
+width: min(100%, 1041px);
+}
+
+.background1-content h3 {
+  text-align: center;
+  padding-top: 60px;
+  letter-spacing: 3px;
+}
+
+.background1-content p {
+  margin: 50px;
+  font-size: clamp(0.69rem, calc(0.60rem + 0.47vw), 1.13rem);
+}
+
+/*Background2*/
+
+.background2{
+  max-width: 100%;
+}
+
+.products{
+  width: 100%;
+  padding: 5rem .5rem;
+  text-align: center;
+  display: block;
+
+}
+
+.products-img img{
+  max-width: 100%;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 480px) { 
+  .products-img img{
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.products-img  :hover{
+ transform: scale(1.2);
+}
+
+.jewelry-content h3 {
+  margin: 20px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.jewelry-content p{
+  margin: 20px;
+  text-align: center;
+  font-size: clamp(0.75rem, calc(0.70rem + 0.27vw), 1.00rem);
+}
+
+/*SUBSCRIBE*/
+
+.subscribe{
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  background-image: url(images/pexels-castorly-stock-3829444.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 30px;
+}
+
+.subscribe h4{
+  letter-spacing: 3px;
+  padding: 20px;
+}
+
+.subscribe p{
+padding-bottom: 20px;
+}
+
+.footer-section{
+  height: min(50%, 50vh);
+  width: 100%;
+background-color: #C6B69F;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.footer-section h5{
+  font-size: clamp(0.90rem, calc(0.82rem + 0.38vw), 1.25rem);
+  padding: 5px;
+}
+
+.customer,
+.help,
+.social {
+  width: 250px;
+  padding: 10px;
+}
+
+
+.social-img li,
+.customer li,
+.help li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.social h5{
+  text-align: center;
+}
+
+.social-img ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+.copy{
+  text-align: center;
+  padding: 10px;
+  background-color: #C6B69F;
+  color: white;
+}
+
+
